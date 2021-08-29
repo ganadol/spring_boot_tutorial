@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.app.Frontend;
 import com.example.app.AddCalculator;
 import com.example.app.Calculator;
 import com.example.app.ArgumentResolver;
@@ -18,5 +19,10 @@ public class AppConfig {
     @Bean
     ArgumentResolver argumentResolver() {
         return new ScannerArgumentResolver();
+    }
+
+    @Bean
+    Frontend frontend() {
+        return new Frontend();
     }
 }
